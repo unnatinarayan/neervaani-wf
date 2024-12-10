@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeerVaani</title>
+  <link rel="shortcut icon" href="images/Neer logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="one.css">
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <!--<div class="sidebar" id="sidebar">
+    <button class="close-btn" id="close-btn">&times;</button>
+    <div class="left-nav">
+      <img class="logo-img" src="./images/Neer2 logo.png" alt="">
+      <h3>NeerVaani</h3>
+    </div>
+    <div class="head-cate">
+      <h3>Categories</h3>
+    </div>
+    <nav>
+      <div class="menu-item">
+        <button class="menu-btn"> Food Crops<span class="arrow">▼</span></button>
+        <ul class="submenu">
+          <li>Cereals and Grains</li>
+          <li>Pulses (Legumes)</li>
+          <li>Vegetables</li>
+          <li>Fruits</li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <button class="menu-btn">Cash Crops <span class="arrow">▼</span></button>
+        <ul class="submenu">
+          <li>Oilseeds</li>
+          <li>Fiber Crops</li>
+          <li>Sugar Crops</li>
+          <li>Spices and Condiments</li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <button class="menu-btn"> Plantation Crops<span class="arrow">▼</span></button>
+        <ul class="submenu">
+          <li>Tea</li>
+          <li>Coffee</li>
+          <li>Coconut</li>
+          <li>Areca nut (betel nut)</li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <button class="menu-btn">Dairy Products<span class="arrow">▼</span></button>
+        <ul class="submenu">
+          <li>Milk</li>
+          <li>Cheese</li>
+          <li>Butter</li>
+          <li>Yougurt</li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <button class="menu-btn">Medicinal and Herbal Crops<span class="arrow">▼</span></button>
+        <ul class="submenu">
+          <li>Neem</li>
+          <li>Ashwagandha</li>
+          <li>Aloe Vera</li>
+          <li>Tulsi </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+-->
+  <!-- Main Content 
+  <div class="main-content">
+    <button class="open-btn" id="open-btn">☰ </button>
+  </div>-->
+  <div class="container">
+    <!-- Search Bar with Upload and Scan options -->
+    <div class="search-container">
+      <form class="search-bar" onsubmit="return searchContent()">
+        <input type="text" id="search-input" placeholder="Search here..." />
+        <button type="submit"><i class="bi bi-search"></i></button>
+
+        <!-- Upload Button -->
+        <label for="file-upload" class="upload-btn">
+          Upload
+          <input id="file-upload" type="file" onchange="handleFileSelect()" />
+        </label>
+
+        <button type="button" class="scan-btn" onclick="scanFile()">Scan</button>
+      </form>
+    </div>
+
+    <!-- Display selected file name -->
+    <p id="file-name"></p>
+    <p id="scan-result"></p>
+
+    <!-- Content Section for Searching -->
+    <div class="wel-head">
+      <h4>Welcome to NeerVaani: The Smart Way to Search, Scan, <br>and Calculate Your Agricultural Water Usage</h4>
+    </div>
+    <div class="content">
+      <div class="content-item" data-title="HTML Basics">
+        <h2>Food Crops</h2>
+        <h4>Cereals and Grains</h4>
+        <div class="img-box">
+          <div class="rice">
+            <div class="rice-img">
+              <img src="images/rice.jpeg" alt="">
+            </div>
+            <div class="name-head">
+              <p>Rice</p>
+
+            </div>
+
+          </div>
+          <div class="rice">
+            <div class="rice-img">
+              <img src="images/wheat.jpeg" alt="">
+            </div>
+            <div class="name-head">
+              <p>Wheat</p>
+
+            </div>
+
+          </div>
+          <div class="rice">
+            <div class="rice-img">
+              <img src="images/maize.jpg" alt="">
+            </div>
+            <div class="name-head">
+              <p>Maize</p>
+
+            </div>
+
+          </div>
+          <div class="rice">
+            <div class="rice-img">
+              <img src="images/barley.jpg" alt="">
+            </div>
+            <div class="name-head">
+              <p>Barley</p>
+
+            </div>
+
+          </div>
+          <div class="rice">
+            <div class="rice-img">
+              <img src="images/oats.jpeg" alt="">
+            </div>
+            <div class="name-head">
+              <p>Oats</p>
+
+            </div>
+
+          </div>
+          <div class="rice">
+            <div class="rice-img">
+              <img src="images/millets.jpeg" alt="">
+            </div>
+            <div class="name-head">
+              <p>Millets</p>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="Pulses">
+          <h4>Pulses(Legumes)</h4>
+          <div class="img-box">
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/chickpeas.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Chickpeas</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/kidneybeans.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Kidney Beans</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/greengrams.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Green Grams</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/blackgrams.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Black Grams</p>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="Vegetables">
+          <h4>Vegetables</h4>
+          <div class="img-box">
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/potato.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Potatoes</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/tomato.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Tomatoes</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/onions.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Onions</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/carrot.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Carrots</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/spinach.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Spinach</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/cabbage.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Cabbage</p>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="Fruits">
+          <h4>Fruits</h4>
+          <div class="img-box">
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/apples.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Apples</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/banana.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Bananas</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/orage.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Oranges</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/mango.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Mangoes</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/strawberry.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Strawberries</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/pineapple.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Pineapples</p>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="content-item" data-title="CSS Styling">
+        <h2>Cash Crops</h2>
+        <div class="Oilseeds">
+          <h4>Oilseeds</h4>
+          <div class="img-box">
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/soyabean.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Soyabeans</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/groundnut.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Groundnut</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/mustard.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Mustard</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/sesame.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Sesame</p>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="Fiber Crops">
+          <h4>Fiber Crops</h4>
+          <div class="img-box">
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/cotton.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Cotton</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/jute.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Jute</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/hemp.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Hemp</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/flax.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Flax</p>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="Spices and Condiments">
+          <h4>Spices and Condiments</h4>
+          <div class="img-box">
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/blackpepper.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Black pepper</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/cardamom.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Cardamom</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/cloves.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Cloves</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/ginger.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Ginger</p>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="content-item" data-title="JavaScript Introduction">
+        <h2>Plantation Crops</h2>
+          <div class="img-box">
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/tea.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Tea</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/Coffee.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Coffee</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/coconut.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Coconut</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/Areca nut.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Areca nut (betel nut)</p>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      <div class="content-item" data-title="JavaScript Introduction">
+        <h2>Dairy Products</h2>
+          <div class="img-box">
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/milk.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Milk</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/cheese.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Cheese</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/butter.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Butter</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/yogurt.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Yogurt</p>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      <div class="content-item" data-title="JavaScript Introduction">
+        <h2>Medicinal and Herbal Crops</h2>
+          <div class="img-box">
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/nee,.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Neem</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/tulsi.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Tulsi</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/Ashwagandha.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Ashwagandha</p>
+
+              </div>
+
+            </div>
+            <div class="rice">
+              <div class="rice-img">
+                <img src="images/Aloe Vera.jpeg" alt="">
+              </div>
+              <div class="name-head">
+                <p>Aloe Vera</p>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="one.js"></script>
+</body>
+
+</html>
